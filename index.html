@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utensils Cover Customization</title>
+  <link rel="stylesheet" href="./css/today.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Section: Color Picker for the utensils cover -->
+    <div class="left-section">
+      <h3>Select Cover Color</h3>
+      <input type="color" id="coverColorPicker" value="#f0f0f0">
+    </div>
+
+    <!-- Middle Section: Utensils container (Napkin + Cover) -->
+    <div class="middle-section">
+      <div class="napkin-container" id="napkinContainer">
+        <!-- Napkin (Back Cover) -->
+        <div class="napkin" id="napkin">
+          <!-- Front Cover with Utensils slot -->
+          <div class="utensils-cover" id="utensilsCover">
+            <div class="utensils-slot" id="utensilsSlot"></div>
+
+            <!-- User logo (Resizable) -->
+            <img src="user-logo-placeholder.png" id="userLogo" alt="User Logo" class="logo resizable">
+
+            <!-- Fixed restaurant logo -->
+            <img src="restaurant-logo.png" alt="Restaurant Logo" class="restaurant-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section: Napkin color options -->
+    <div class="right-section">
+      <h3>Select Napkin Color</h3>
+      <ul class="napkin-color-options">
+        <li data-color="#ffffff" class="color-option" style="background-color: #ffffff;"></li>
+        <li data-color="#e0e0e0" class="color-option" style="background-color: #e0e0e0;"></li>
+        <li data-color="#f0d0d0" class="color-option" style="background-color: #f0d0d0;"></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer: Screenshot, upload logo, and form inputs -->
+  <footer>
+    <button id="screenshotBtn">Take Screenshot</button>
+    <button id="uploadLogoBtn">Upload Logo</button>
+    <input type="file" id="logoUploader" accept="image/*" style="display:none;">
+
+    <form id="userForm">
+      <input type="text" id="userName" placeholder="Username">
+      <input type="email" id="userEmail" placeholder="Email">
+      <input type="tel" id="userPhone" placeholder="Phone Number">
+      <button type="button" id="saveChangesBtn">Save Changes</button>
+    </form>
+  </footer>
+
+  <script src="./js/today.js"></script>
+</body>
+</html>

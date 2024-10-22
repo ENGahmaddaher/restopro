@@ -1,0 +1,133 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Napkin (Back Cover) */
+.napkin-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+.napkin {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+/* Utensils Cover (Front Cover) */
+.utensils-cover {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 50%;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+}
+
+/* Utensils Slot (independent of the cover color) */
+.utensils-slot {
+    width: 100%;
+    height: 50px;
+    background-color: #ccc; /* Default color for utensils slot */
+    margin-top: 5px;
+}
+
+/* User logo (Resizable) */
+.logo {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 4px);
+    object-fit: contain;
+    padding: 5px;
+    resize: both;
+    overflow: hidden;
+}
+
+.resizable {
+    resize: both;
+    overflow: hidden;
+}
+
+/* Restaurant logo (Fixed) */
+.restaurant-logo {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Napkin color options */
+.napkin-color-options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
